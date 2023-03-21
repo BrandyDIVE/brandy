@@ -22,30 +22,32 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="小羊丢了在找羊">
-<meta property="og:type" content="website">
-<meta property="og:title" content="百味汽水之精分少女的茶话会">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="上一期我们聊了json.parse这个方法，这一期我们来谈谈json.stringify这个方法。 JSON.stringify 是什么  JSON.stringify 方法将某个对象转换成 JSON 字符串形式 123456const userInfo&#x3D; &amp;#123;    name: &amp;#x27;zs&amp;#x27;,    age: 20&amp;#125;console.log(JSON.string">
+<meta property="og:type" content="article">
+<meta property="og:title" content="谈一谈JSON对象的两种方法（二）">
+<meta property="og:url" content="http://example.com/2023/03/21/%E8%B0%88%E4%B8%80%E8%B0%88JSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
 <meta property="og:site_name" content="百味汽水之精分少女的茶话会">
-<meta property="og:description" content="小羊丢了在找羊">
+<meta property="og:description" content="上一期我们聊了json.parse这个方法，这一期我们来谈谈json.stringify这个方法。 JSON.stringify 是什么  JSON.stringify 方法将某个对象转换成 JSON 字符串形式 123456const userInfo&#x3D; &amp;#123;    name: &amp;#x27;zs&amp;#x27;,    age: 20&amp;#125;console.log(JSON.string">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-21T10:42:42.607Z">
+<meta property="article:modified_time" content="2023-03-21T10:44:36.030Z">
 <meta property="article:author" content="brandy">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2023/03/21/%E8%B0%88%E4%B8%80%E8%B0%88JSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>百味汽水之精分少女的茶话会</title>
+  <title>谈一谈JSON对象的两种方法（二） | 百味汽水之精分少女的茶话会</title>
   
 
 
@@ -163,118 +165,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/21/%E5%BD%93var,let%20%E9%81%87%E4%B8%8A%20for%E5%BE%AA%E7%8E%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="brandy">
-      <meta itemprop="description" content="小羊丢了在找羊">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="百味汽水之精分少女的茶话会">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/21/%E5%BD%93var,let%20%E9%81%87%E4%B8%8A%20for%E5%BE%AA%E7%8E%AF/" class="post-title-link" itemprop="url">当var,let 遇上 for循环</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-21 18:43:55 / 修改时间：18:45:15" itemprop="dateCreated datePublished" datetime="2023-03-21T18:43:55+08:00">2023-03-21</time>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>题目如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;<span class="number">3</span>;i++)&#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span><span class="variable language_">console</span>.<span class="title function_">log</span>(i),<span class="number">1</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)&#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span><span class="variable language_">console</span>.<span class="title function_">log</span>(i),<span class="number">1</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>输出： ？</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">333和012</span><br></pre></td></tr></table></figure>
-
-<p>解答：</p>
-<p>由于javascript的事件循环，setTimeout回调会在遍历结束后才执行。因为在第一个遍历中遍历i是通过var关键字声明的，所以这个值是全局作用域下的。在遍历过程中，我们通过一元操作符++来每次递增i的值。</p>
-<p>当setTimeout回调执行的时候，i的值等于3.在第二个遍历中，遍历i是通过let关键字声明的：通过let和const关键字声明的变量是拥有块级作用域（指的是任何在{}中的内容）。在每次的遍历过程中，i都有一个新值，并且每个新值都在循环内的作用域中。</p>
-<h4 id="又有人会问到🤔，javascript的事件循环是什么？（✨：咱们先搞清楚以下几点）"><a href="#又有人会问到🤔，javascript的事件循环是什么？（✨：咱们先搞清楚以下几点）" class="headerlink" title="又有人会问到🤔，javascript的事件循环是什么？（✨：咱们先搞清楚以下几点）"></a>又有人会问到🤔，javascript的事件循环是什么？（✨：咱们先搞清楚以下几点）</h4><ol>
-<li>js是单线程，怎么理解单线程：</li>
-</ol>
-<p>​       就是指一次只能完成一件任务，如果在同个时间有多个任务的话，这些任务就需要进行排队，前一个任务执行完，才会执行下一个任务。但如果有一个任务的执行时间很长，比如文件的读取或者数据的请求等等，那么后面的任务就要一直等待，这就会影响用户的使用体验。</p>
-<p><strong>so,  为了解决这种情况，Javascript语言将任务的执行模式分成两种：同步（Synchronous）和异步（Asynchronous）。</strong></p>
-<ol start="2">
-<li><p>同步模式: 就是前一个任务执行完成后，再执行下一个任务，程序的执行顺序与任务的排列顺序是一致的、同步的；</p>
-</li>
-<li><p>异步模式: 则完全不同，每一个任务有一个或多个回调函数（callback），前一个任务结束后，不是执行队列上的后一个任务，而是执行回调函数；后一个任务则是不等前一个任务的回调函数的执行而执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的。</p>
-</li>
-</ol>
-<p>好的，我们接着说事件循环，也叫做Event Loop</p>
-<ol>
-<li><p> 同步任务和异步任务分别进入不同的执行”场所”; 同步任务进入主线程，异步任务进入Event Table并注册回调函数。</p>
-</li>
-<li><p> 当指定的事情完成时，Event Table会将这个函数移入任务队列(task quene)，等待主线程的任务执行完毕;</p>
-</li>
-<li><p> 当栈中的代码执行完毕，执行栈(call stack)中的任务为空时，就会读取任务队列(task quene)中的任务，去执行对应的回调;</p>
-</li>
-</ol>
-<p>   <strong>如此循环，就形成js的事件循环机制(Event Loop)。</strong></p>
-<p>   流程图look look:(看看图会清楚很多趴 🤔)</p>
-<p><img src="https://img-blog.csdnimg.cn/20200821150103500.png#pic_center" alt="在这里插入图片描述"></p>
-<p><strong>同步任务和异步任务实例</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>) <span class="comment">// 同步任务</span></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123; <span class="comment">// 异步任务</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">4</span>)</span><br><span class="line">&#125;,  <span class="number">2000</span>)</span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123; <span class="comment">// 异步任务</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>)</span><br><span class="line">&#125;,  <span class="number">1000</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>) <span class="comment">// 同步任务</span></span><br><span class="line"><span class="comment">//输出结果:1 2 3 4</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">先执行同步任务，所以是输出 1 2，后执行异步任务，先输出 3，很明显是因为等待的时间不同</span><br></pre></td></tr></table></figure>
-
-<p>常见的异步任务有</p>
-<ol>
-<li>javascript各种事件的执行都是异步任务</li>
-<li>setTimeout、setInterval 定时器 特别的如果将setTimeout()的第二个参数设为0，就表示当前代码执行完（执行栈清空）以后，立即执行（0毫秒间隔）指定的回调函</li>
-<li>queueMicrotask 执行微任务</li>
-<li>XMLHttpRequest（也就是 Ajax）</li>
-<li>requestAnimationFrame 类似于定时器，但是是以每一帧为单位</li>
-<li>fetch Fetch API 提供了一个 JavaScript 接口,用于访问和操纵 HTTP 管道的一些具体部分</li>
-<li>MutationObserver 创建并返回一个新的 MutationObserver 它会在指定的DOM发生变化时被调用。</li>
-<li>Promise</li>
-<li>async function</li>
-</ol>
-<p> and so on，欢迎补充👏</p>
-
-      
-    </div>
-
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -290,10 +184,9 @@
       <meta itemprop="name" content="百味汽水之精分少女的茶话会">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/21/%E8%B0%88%E4%B8%80%E8%B0%88JSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/" class="post-title-link" itemprop="url">谈一谈JSON对象的两种方法（二）</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          谈一谈JSON对象的两种方法（二）
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -317,7 +210,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>上一期我们聊了json.parse这个方法，这一期我们来谈谈json.stringify这个方法。</p>
+        <p>上一期我们聊了json.parse这个方法，这一期我们来谈谈json.stringify这个方法。</p>
 <h2 id="JSON-stringify"><a href="#JSON-stringify" class="headerlink" title="JSON.stringify"></a>JSON.stringify</h2><ol>
 <li>是什么</li>
 </ol>
@@ -362,165 +255,34 @@
 <p>单独转换的结果就是：</p>
 <p>✨：undefined、任意的函数以及Symbol被JSON.stringify()作为单独的值进行序列化时都会返回undefined</p>
 
-      
     </div>
 
     
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/20/Welcome%20to%20brandy%20's%20blog%20site/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="brandy">
-      <meta itemprop="description" content="小羊丢了在找羊">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="百味汽水之精分少女的茶话会">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/20/Welcome%20to%20brandy%20's%20blog%20site/" class="post-title-link" itemprop="url">Welcome to brandy 's blog site</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-20 18:12:48 / 修改时间：18:40:35" itemprop="dateCreated datePublished" datetime="2023-03-20T18:12:48+08:00">2023-03-20</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>​                                                                摩羯座/七分感性/精神洁癖/八分疯癫</p>
-<p>​                                                                             一点点文艺因子/</p>
-<p>​                                                                             很多点浪漫主义/</p>
-<p>​                                                                     有独属于自己的浪漫小世界💗/</p>
-<p>​                                                                收入刚好维持在我的躯壳和灵魂不分家/<br>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/03/20/Welcome%20to%20brandy%20's%20blog%20site/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/20/%E8%B0%88%E4%B8%80%E8%B0%88JSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="brandy">
-      <meta itemprop="description" content="小羊丢了在找羊">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="百味汽水之精分少女的茶话会">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/20/%E8%B0%88%E4%B8%80%E8%B0%88JSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-title-link" itemprop="url">谈一谈JSON对象的两种方法（一）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-20 18:12:36 / 修改时间：18:42:27" itemprop="dateCreated datePublished" datetime="2023-03-20T18:12:36+08:00">2023-03-20</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="JSON格式"><a href="#JSON格式" class="headerlink" title="JSON格式"></a>JSON格式</h2><p>Json格式，是一种用于数据交换的文本格式，书写简单。基于javascript的原生语法，能够序列化对象、数组、数值、字符串、布尔值和null</p>
-<p>在ES5中，增加了一个JSON对象，专门用来处理JSON格式的数据。</p>
-<p>JSON是一个对象，但只有两个方法：parse和stringify,不能作为构造函数，也无属性。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="title class_">JSON</span> === <span class="string">&#x27;object&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>我们今天先来聊一聊json.parse这个方法</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/03/20/%E8%B0%88%E4%B8%80%E8%B0%88JSON%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/03/20/Welcome%20to%20brandy%20's%20blog%20site/" rel="prev" title="Welcome to brandy 's blog site">
+      <i class="fa fa-chevron-left"></i> Welcome to brandy 's blog site
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/03/21/%E5%BD%93var,let%20%E9%81%87%E4%B8%8A%20for%E5%BE%AA%E7%8E%AF/" rel="next" title="当var,let 遇上 for循环">
+      当var,let 遇上 for循环 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -573,6 +335,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON-stringify"><span class="nav-number">1.</span> <span class="nav-text">JSON.stringify</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
